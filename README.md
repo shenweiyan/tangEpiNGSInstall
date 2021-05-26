@@ -14,13 +14,15 @@ docker run  -v /Users/hubq/Downloads/Project/tangEpiPipeline/tangEpiPipelineInst
 
 ------
 
-edit by shenweiyan:
+Update by shenweiyan:
+
+=====================
 
 ref 选择为 mm10，如果你的本地路径没有 mm10.fa，本 Docker 流程的第一步会：
 
-首先，下载网上的 fasta 文件（[http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz](http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz)）。
+1. 首先，下载网上的 fasta 文件（[http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz](http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/chromFa.tar.gz)）。
 
-然后，解压，再通过 cat 把 chr{1..22} X Y M 合并成 ${ref}.fa。
+2. 然后，解压，再通过 cat 把 chr{1..22} X Y M 合并成 ${ref}.fa。
 ```
 $ cat /home/analyzer/project/ChIP_test/scripts/sample.tab/db01.DownloadRef.sh
 ref=$1
@@ -39,4 +41,7 @@ do
 done  >$dir_database/${ref}.fa && rm $dir_database/chr*fa
 ```
 
-最后，建立 bwa 软件的 index。
+3. 最后，建立 bwa 软件的 index。
+```
+/software/install_packages/bwa-0.7.5a/bwa index /home/analyzer/database_ChIP/mm10/mm10.fa
+```
