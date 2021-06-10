@@ -14,11 +14,9 @@ docker run  -v /Users/hubq/Downloads/Project/tangEpiPipeline/tangEpiPipelineInst
 
 ------
 
-=====================
-
+----------------------
 Update by shenweiyan:
-
-=====================
+----------------------
 
 # Usage
 
@@ -122,9 +120,10 @@ cp: cannot stat `StatInfo/*': No such file or directory
 ![docker-error](https://user-images.githubusercontent.com/26101369/121470941-79a3a080-c9f1-11eb-8fd7-2f199d2d5c16.jpg)
 
 **注意：**
+
 hubq/tanginstall:latest 的镜像如果运行过程中出现上面的错误，**请把 hubq/tanginstall:latest 镜像更换为 shenweiyan/tanginstall:latest，然后重新执行 docker run 命令！**
 
-# 说明
+# 其他简要说明
 
 ref 选择为 mm10，如果你的本地路径没有 mm10.fa，本 Docker 流程的第一步会：
 
